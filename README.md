@@ -4,7 +4,7 @@ A Makefile to compile sedumi using gcc (Apple LLVM version 9.1.0 (clang-902.0.39
 
 ## Original Sedumi info
 
-All the necessary information and source code were retrieved from [sedumi fork]{https://github.com/sqlp/sedumi/}. Please visit that web page for the necessary information
+All the necessary information and source code were retrieved from [sedumi fork](https://github.com/sqlp/sedumi/). Please visit that web page for the necessary information
 
 ## What has been modified
 
@@ -27,7 +27,9 @@ Obs.:  I am not sure about the sizes of Lir and Ljc
 
 ###symbchol.h 
 
-The header file was created to remove the compilation error when using gcc.  An implicit declation of a function was added.
+The header file was created to remove the compilation error when using gcc.  An implicit declation of a function was added as follows:
+
+void getadj(mwIndex \*forjc,mwIndex \*forir,const mwIndex \*cjc,const mwIndex \*cir,const mwIndex n);
 
 ###blkchol.h
  
