@@ -10,28 +10,28 @@ All the necessary information and source code were retrieved from [sedumi fork](
 
 To get the makefile working (*icc* and *gcc* problems) I had to create new header files and modify some c sources.  
 
-###blkmul.c
+**blkmul.c**
 
 1. Add line "int blkmulsize;"
-2. Fix line "nL = (mwindex *) mxCalloc(MAX(1,kappa), sizeof(mwIndex));" mwIndex and not mwindex
+2. Fix line "nL = (mwindex \*) mxCalloc(MAX(1,kappa), sizeof(mwIndex));" mwIndex and not mwindex
  
-###symbchol.c
+**symbchol.c**
 
-1. Line "perm   = (mwIndex *) mxCalloc(m,sizeof(mwIndex));" -> add perm to the list of mwIndex vars
-2. Line "iwork = (mwIndex *) mxCalloc(iwsiz,sizeof(mwIndex));"-> ditto
-3. Line "xlindx = (mwIndex *) mxCalloc(m+1,sizeof(mwIndex));" -> ditto
-4. Lir, Ljc are not declated -> int *Lir, *Ljc and then (int *) mxCalloc(m+1,sizeof(int));
+1. Line "perm   = (mwIndex \*) mxCalloc(m,sizeof(mwIndex));" -> add perm to the list of mwIndex vars
+2. Line "iwork = (mwIndex \*) mxCalloc(iwsiz,sizeof(mwIndex));"-> ditto
+3. Line "xlindx = (mwIndex \*) mxCalloc(m+1,sizeof(mwIndex));" -> ditto
+4. Lir, Ljc are not declated -> int \*Lir, \*Ljc and then (int \*) mxCalloc(m+1,sizeof(int));
 5. \#include "symbchol.h"
 
 Obs.:  I am not sure about the sizes of Lir and Ljc
 
-###symbchol.h 
+**symbchol.h**
 
 The header file was created to remove the compilation error when using gcc.  An implicit declation of a function was added as follows:
 
 void getadj(mwIndex \*forjc,mwIndex \*forir,const mwIndex \*cjc,const mwIndex \*cir,const mwIndex n);
 
-###blkchol.h
+**blkchol.h**
  
 "touch blkchol.h"  (Perhaps the authors forgot to remove this header from some of the files"
  
