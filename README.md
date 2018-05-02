@@ -1,6 +1,6 @@
 # makefile_sedumi
 
-A Makefile to compile sedumi using gcc (Apple LLVM version 9.1.0 (clang-902.0.39.1)) and intel compiler (icc (ICC) 17.0.4 20170411). It worked flawlessly on my mac running Matlab 2017b.   
+A Makefile (in a command line not within Matlab) to compile sedumi using gcc (Apple LLVM version 9.1.0 (clang-902.0.39.1)) and intel compiler (icc (ICC) 17.0.4 20170411). It worked flawlessly on my mac running Matlab 2017b.   
 
 ## Original Sedumi info
 
