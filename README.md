@@ -41,4 +41,4 @@ To create mex functions do:
 
 1. Go to sedumi-master dir
 2. Make the changes in the files listed above and create the header files.
-3. Issue *make* (to create all obj files and mex binaries) 
+3. Issue *make all* (to create all obj files and mex binaries) 
